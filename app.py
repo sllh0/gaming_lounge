@@ -438,7 +438,7 @@ elif page == "🕐  ساعات العمل":
     # جدول ساعات العمل
     today_name = datetime.now().strftime("%A")  # اليوم الحالي بالإنجليزية 
     
-   schedule_data = [
+ schedule_data = [
         ("الاثنين",    "Monday",    "10:00 صباحاً", "12:00 منتصف الليل", True),
         ("الثلاثاء",   "Tuesday",   "10:00 صباحاً", "12:00 منتصف الليل", True),
         ("الأربعاء",   "Wednesday", "10:00 صباحاً", "12:00 منتصف الليل", True),
@@ -448,7 +448,7 @@ elif page == "🕐  ساعات العمل":
         ("الأحد",     "Sunday",    "12:00 ظهراً", "12:00 منتصف الليل", True),
     ]
 
-    col_sched, col_info = st.columns([3, 2], gap="large")
+col_sched, col_info = st.columns([3, 2], gap="large")
 
     with col_sched:
         st.markdown('<div class="schedule-card">', unsafe_allow_html=True)
