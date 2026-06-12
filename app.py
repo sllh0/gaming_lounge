@@ -232,7 +232,6 @@ def init_state():
     if "reviews" not in st.session_state:
         st.session_state.reviews = [
             {"name": "Yassine M.", "stars": 5, "text": "الأجواء ديالهم لا تصدق! PC كيمشي بسرعة عالية والموظفين مزيانين.", "date": "2025-06-01"},
-            {"name": "Sara K.",    "stars": 4, "text": "تجربة رائعة، بس باغيا يزيدو أجهزة Console أكثر.", "date": "2025-06-05"},
             {"name": "Omar B.",    "stars": 5, "text": "أحسن قاعة ألعاب في المدينة! هنا كنجيب دايما.", "date": "2025-06-08"},
         ]
 
@@ -313,7 +312,7 @@ with st.sidebar:
                     background:linear-gradient(90deg,#00f5ff,#bf00ff);
                     -webkit-background-clip:text; -webkit-text-fill-color:transparent;
                     background-clip:text;">
-            NeonZone
+            S-GARAGE
         </div>
         <div style="color:#3a4a6b; font-size:0.78rem; letter-spacing:2px; text-transform:uppercase;">
             Gaming Lounge
@@ -335,9 +334,9 @@ with st.sidebar:
     # معلومات التواصل
     st.markdown("""
     <div style="color:#3a4a6b; font-size:0.8rem; line-height:1.9;">
-        📍 حي الرياض، الرباط<br>
-        📞 +212 6XX-XXXXXX<br>
-        📧 contact@neonzone.ma<br>
+        📍 marrakech<br>
+        📞 +212 645-342015<br>
+        📧 salahnorfe@gmail.com<br>
         <br>
         <span style="color:#00f5ff;">@NeonZoneGaming</span>
     </div>
@@ -390,9 +389,8 @@ if page == "🏠  الرئيسية":
     # Stats Bar
     st.markdown('<hr class="neon-divider">', unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
-    stats = [
-        ("🖥️", "20+", "أجهزة PC"),
-        ("🕹️", "8",   "أجهزة Console"),
+    stats = 
+        ("🕹️", "5",   "أجهزة Console"),
         ("⭐", f"{len(st.session_state.reviews)}", "تقييم زبون"),
         ("📅", f"{len(st.session_state.bookings)}", "حجز مكتمل"),
     ]
@@ -628,7 +626,7 @@ elif page == "📅  الحجز":
                 key="b_time",
             )
 
-        b_device   = st.radio("نوع الجهاز *", ["🖥️ PC", "🕹️ Console"], horizontal=True, key="b_device")
+        b_device   = st.radio("نوع الجهاز *", [, "🕹️ Console"], horizontal=True, key="b_device")
         b_duration = st.selectbox("المدة *", ["1 ساعة", "2 ساعة", "3 ساعات", "يوم كامل"], key="b_dur")
         b_notes    = st.text_area("ملاحظات إضافية", placeholder="أي طلب خاص...", height=80, key="b_notes")
 
@@ -740,13 +738,7 @@ elif page == "🗳️  التصويت":
             "desc":  "مشروبات طاقة، قهوة، وسناكس Gaming بأسعار مناسبة داخل القاعة",
             "color": "#ff0090",
         },
-        {
-            "id":    "racing_sim",
-            "icon":  "🏎️",
-            "title": "سيمولاتور السيارات",
-            "desc":  "مقعد سباق احترافي مع عجلة قيادة وبيدالات لتجربة قيادة واقعية",
-            "color": "#ff6d00",
-        },
+
     ]
 
     # ترتيب الاقتراحات حسب الأصوات
