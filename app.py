@@ -627,7 +627,7 @@ elif page == "📅  الحجز":
                 key="b_time",
             )
 
-      b_device = st.selectbox("نوع الجهاز *", ["🕹️ Console"], key="b_device")
+        b_device = st.selectbox("نوع الجهاز *", ["🕹️ Console"], key="b_device")
         b_duration = st.selectbox("المدة *", ["1 ساعة", "2 ساعة", "3 ساعات", "يوم كامل"], key="b_dur")
         b_notes    = st.text_area("ملاحظات إضافية", placeholder="أي طلب خاص...", height=80, key="b_notes")
 
