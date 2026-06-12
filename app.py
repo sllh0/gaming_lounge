@@ -447,8 +447,8 @@ schedule_data = [
         ("السبت",     "Saturday",  "10:00 صباحاً", "12:00 منتصف الليل", True),
         ("الأحد",     "Sunday",    "12:00 ظهراً", "12:00 منتصف الليل", True),
     ]
-    col_sched, col_info = st.columns([3, 2], gap="large")
 
+    col_sched, col_info = st.columns([3, 2], gap="large")
     with col_sched:
         st.markdown('<div class="game-card">', unsafe_allow_html=True)
         for ar_name, en_name, open_t, close_t, is_open in schedule:
