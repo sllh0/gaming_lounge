@@ -390,7 +390,7 @@ if page == "🏠  الرئيسية":
     st.markdown('<hr class="neon-divider">', unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     stats = 
-        ("🕹️", "5",   "أجهزة Console"),
+        ("🕹️", "5", "أجهزة Console"),
         ("⭐", f"{len(st.session_state.reviews)}", "تقييم زبون"),
         ("📅", f"{len(st.session_state.bookings)}", "حجز مكتمل"),
     for col, (icon, val, label) in zip([c1, c2, c3, c4], stats):
