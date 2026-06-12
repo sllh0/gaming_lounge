@@ -449,22 +449,20 @@ schedule_data = [
     ]
 
     col_sched, col_info = st.columns([3, 2], gap="large")
+
     with col_sched:
-        st.markdown('<div class="game-card">', unsafe_allow_html=True)
-        for ar_name, en_name, open_t, close_t, is_open in schedule:
-            is_today = (en_name == today_name)
-            today_style = "border-right:3px solid #00f5ff; padding-right:0.5rem;" if is_today else ""
-            tag = '<span class="open-tag">مفتوح</span>' if is_open else '<span class="closed-tag">مغلق</span>'
-            today_badge = '<span style="color:#00f5ff; font-size:0.75rem; margin-right:0.4rem;">◉ اليوم</span>' if is_today else ""
+        st.markdown('<div class="schedule-card">', unsafe_allow_html=True)
+        st.markdown('<div class="zone-title">📅 أوقات العمل والدوام</div>', unsafe_allow_html=True)
+        
+        for day_ar, day_en, open_t, close_t, is_open in schedule_data:
             st.markdown(f"""
-            <div class="hour-row" style="{today_style}">
-                <span class="day-name">{today_badge}{ar_name}</span>
-                <span class="hour-time">{open_t} — {close_t}</span>
-                {tag}
+            <div class="schedule-row">
+                <span style="font-weight:600; color:#fff;">{day_ar}</span>
+                <span style="color:#00f5ff; font-family:'Rajdhani',sans-serif; font-weight:600;">{open_t} - {close_t}</span>
             </div>
             """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
-
+        
     with col_info:
         # معلومات إضافية
         st.markdown("""
