@@ -14,7 +14,7 @@ from datetime import datetime, date, time
 # إعداد الصفحة (Page Config) - لازم تكون أول استدعاء Streamlit
 # ============================================================
 st.set_page_config(
-    page_title="NeonZone Gaming Lounge",
+    page_title="S-GARAGE Gaming Lounge",
     page_icon="🎮",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -231,8 +231,8 @@ def init_state():
     # التقييمات
     if "reviews" not in st.session_state:
         st.session_state.reviews = [
-            {"name": "Yassine M.", "stars": 5, "text": "الأجواء ديالهم لا تصدق! PC كيمشي بسرعة عالية والموظفين مزيانين.", "date": "2025-06-01"},
-            {"name": "Omar B.",    "stars": 5, "text": "أحسن قاعة ألعاب في المدينة! هنا كنجيب دايما.", "date": "2025-06-08"},
+            {"name": "Yassine .", "stars": 5, "text": "5oya ana ia dkxi zwin .", "date": "2025-06-01"},
+            {"name": "Omar .",    "stars": 5, "text": "wlh mert ax ngolih ms kn 5ra ra b dhk .", "date": "2025-06-08"},
         ]
 
     # الحجوزات
