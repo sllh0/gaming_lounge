@@ -393,7 +393,6 @@ if page == "🏠  الرئيسية":
         ("🕹️", "5",   "أجهزة Console"),
         ("⭐", f"{len(st.session_state.reviews)}", "تقييم زبون"),
         ("📅", f"{len(st.session_state.bookings)}", "حجز مكتمل"),
-    ]
     for col, (icon, val, label) in zip([c1, c2, c3, c4], stats):
         with col:
             st.markdown(f"""
