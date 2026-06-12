@@ -388,22 +388,24 @@ if page == "🏠  الرئيسية":
 
     # Stats Bar
     st.markdown('<hr class="neon-divider">', unsafe_allow_html=True)
-    c1, c2, c3, c4 = st.columns(4)
-    stats = 
+    c1, c2, c3 = st.columns(3)
+    
+    stats = [
         ("🕹️", "5", "أجهزة Console"),
         ("⭐", f"{len(st.session_state.reviews)}", "تقييم زبون"),
-        ("📅", f"{len(st.session_state.bookings)}", "حجز مكتمل"),
-    for col, (icon, val, label) in zip([c1, c2, c3, c4], stats):
+        ("📅", f"{len(st.session_state.bookings)}", "حجز مكتمل")
+    ]
+    
+    for col, (icon, val, label) in zip([c1, c2, c3], stats):
         with col:
             st.markdown(f"""
-            <div class="game-card" style="text-align:center;">
-                <div style="font-size:1.8rem;">{icon}</div>
-                <div style="font-family:'Rajdhani',sans-serif; font-size:2rem; font-weight:700;
-                            color:#00f5ff; line-height:1.1;">{val}</div>
-                <div style="color:#7b8db0; font-size:0.82rem;">{label}</div>
+            <div style="text-align:center; padding:1rem; background:rgba(255,255,255,0.03); border-radius:10px;">
+                <div style="font-size:2rem;">{icon}</div>
+                <div style="font-size:1.8rem; font-weight:bold; color:#00f5ff;">{val}</div>
+                <div style="color:#7b8db0; font-size:0.9rem;">{label}</div>
             </div>
             """, unsafe_allow_html=True)
-
+      
     # آخر التقييمات
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("### 💬 آخر التقييمات")
